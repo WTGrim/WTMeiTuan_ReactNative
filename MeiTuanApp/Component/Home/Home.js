@@ -80,7 +80,7 @@ var Home = React.createClass({
 const styles = StyleSheet.create({
     navBarStyle:{ // 导航条样式
         height: Platform.OS == 'ios' ? 64 : 44,
-        backgroundColor:'rgba(255,96,0,1.0)',
+        backgroundColor:'rgba(39,198,214,1.0)',
 
         // 设置主轴的方向
         flexDirection:'row',
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
 
     container: {
         flex: 1,
-        backgroundColor: '#e8e8e8'
+        backgroundColor: '#f5f5f5'
     },
     welcome: {
         fontSize: 20,

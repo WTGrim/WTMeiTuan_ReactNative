@@ -26,13 +26,13 @@ var More = React.createClass({
                 {this.renderNavBar()}
 
                 <ScrollView>
-                    <View style={{marginTop:20}}>
+                    <View style={{marginTop:10}}>
                         <CommonCell
                             title="扫一扫"
                         />
                     </View>
 
-                    <View style={{marginTop:20}}>
+                    <View style={{marginTop:10}}>
                         <CommonCell
                             title="省流量模式"
                             isSwitch={true}
@@ -41,7 +41,7 @@ var More = React.createClass({
                             title="消息提醒"
                         />
                         <CommonCell
-                            title="邀请好友使用码团"
+                            title="邀请好友使用美团"
                         />
                         <CommonCell
                             title="清空缓存"
@@ -49,7 +49,7 @@ var More = React.createClass({
                         />
                     </View>
 
-                    <View style={{marginTop:20}}>
+                    <View style={{marginTop:10}}>
                         <CommonCell
                             title="问卷调查"
                         />
@@ -60,7 +60,7 @@ var More = React.createClass({
                             title="网络诊断"
                         />
                         <CommonCell
-                            title="关于码团"
+                            title="关于美团"
                         />
                         <CommonCell
                             title="我要应聘"
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
 
     navOutViewStyle:{
         height: Platform.OS == 'ios' ? 64 : 44,
-        backgroundColor:'rgba(255,96,0,1.0)',
+        backgroundColor:'rgba(39,198,214,1.0)',
 
         // 设置主轴的方向
         flexDirection:'row',
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
 
     container: {
         flex: 1,
-        backgroundColor: '#e8e8e8',
+        backgroundColor: '#f5f5f5',
     },
     welcome: {
         fontSize: 20,
