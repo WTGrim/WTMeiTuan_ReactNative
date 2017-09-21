@@ -22,9 +22,9 @@ var {width, height} = Dimensions.get('window');
 var HomeDetail = require('./HomeDetail');
 var TopView = require('./HomeTopView');
 var MiddleView = require('./HomeMiddleView');
-// var MiddleBottomView = require('./XMGMiddleBottomView');
-// var ShopCenter = require('./XMGShopCenter');
-// var ShopCenterDetail = require('./XMGShopCenterDetail');
+var MiddleBottomView = require('./HomeMiddleBottomView');
+var ShopCenter = require('./HomeShopCenter');
+var ShopCenterDetail = require('./ShopCenterDetail');
 // var GeustYouLike = require('./XMGGeustYouLike');
 
 var Home = React.createClass({
@@ -35,10 +35,22 @@ var Home = React.createClass({
                 {this.renderNavBar()}
                 {/*首页的主要内容*/}
                 <ScrollView>
+
                     {/*头部的View*/}
                     <TopView />
+
                     {/*中间的内容*/}
                     <MiddleView />
+
+                    {/*中下的内容*/}
+                    <MiddleBottomView
+                        popTopHome={(data)=>{this.pushToDetail(data)}}
+                    />
+
+                    {/*购物中心*/}
+                    <ShopCenter
+                        popToHomeView = {(url) => this.pushToShopCenterDetail(url)}
+                    />
 
                 </ScrollView>
             </View>
@@ -75,8 +87,8 @@ var Home = React.createClass({
     pushToShopCenterDetail(url){
         this.props.navigator.push(
             {
-                // component: ShopCenterDetail, // 要跳转的版块
-                // passProps: {'url': this.dealWithUrl(url)}
+                component: ShopCenterDetail, // 要跳转的版块
+                passProps: {'url': this.dealWithUrl(url)}
             }
         );
     },
@@ -90,12 +102,11 @@ var Home = React.createClass({
     // 跳转到二级界面
     pushToDetail(data){
 
-        // alert(data);
-
+        alert(data);
         this.props.navigator.push(
             {
-                // component: HomeDetail, // 要跳转的版块
-                // title:'详情页'
+                component: HomeDetail, // 要跳转的版块
+                title:'详情页',
             }
         );
     }

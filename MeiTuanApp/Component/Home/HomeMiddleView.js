@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     },
 
     leftViewStyle:{
-        width:width * 0.5,
+        width:width * 0.5 - 1,
         height:119,
         backgroundColor:'white',
         marginRight:1,

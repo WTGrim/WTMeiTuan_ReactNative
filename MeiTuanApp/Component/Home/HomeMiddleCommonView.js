@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
         height:59,
         marginBottom:1,
         marginRight:1,
+        padding:-1,
 
         // 改变主轴的方向
         flexDirection:'row',
