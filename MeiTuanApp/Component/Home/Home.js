@@ -19,9 +19,9 @@ var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
 
 /**----导入外部的组件类---**/
-// var HomeDetail = require('./XMGHomeDetail');
+var HomeDetail = require('./HomeDetail');
 var TopView = require('./HomeTopView');
-// var MiddleView = require('./XMGHomeMiddleView');
+var MiddleView = require('./HomeMiddleView');
 // var MiddleBottomView = require('./XMGMiddleBottomView');
 // var ShopCenter = require('./XMGShopCenter');
 // var ShopCenterDetail = require('./XMGShopCenterDetail');
@@ -37,6 +37,8 @@ var Home = React.createClass({
                 <ScrollView>
                     {/*头部的View*/}
                     <TopView />
+                    {/*中间的内容*/}
+                    <MiddleView />
 
                 </ScrollView>
             </View>
