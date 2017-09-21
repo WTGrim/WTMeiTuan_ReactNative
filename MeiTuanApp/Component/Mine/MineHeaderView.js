@@ -57,7 +57,7 @@ var HeaderView = React.createClass({
         // 数组
         var itemArr = [];
         // 数据数组
-        var data = [{'number':'100', 'title':'码哥券'},{'number':'12', 'title':'评价'},{'number':'50', 'title':'收藏'}];
+        var data = [{'number':'100', 'title':'优惠券'},{'number':'12', 'title':'评价'},{'number':'50', 'title':'收藏'}];
         // 遍历创建组件装入数组
         for(var i=0; i<data.length; i++){
             // 取出单独的数据

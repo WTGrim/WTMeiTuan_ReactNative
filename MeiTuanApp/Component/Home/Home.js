@@ -20,7 +20,12 @@ var {width, height} = Dimensions.get('window');
 
 /**----导入外部的组件类---**/
 // var HomeDetail = require('./XMGHomeDetail');
-// var TopView = require('./XMGTopView');
+var TopView = require('./HomeTopView');
+// var MiddleView = require('./XMGHomeMiddleView');
+// var MiddleBottomView = require('./XMGMiddleBottomView');
+// var ShopCenter = require('./XMGShopCenter');
+// var ShopCenterDetail = require('./XMGShopCenterDetail');
+// var GeustYouLike = require('./XMGGeustYouLike');
 
 var Home = React.createClass({
     render() {
@@ -29,11 +34,11 @@ var Home = React.createClass({
                 {/*首页的导航条*/}
                 {this.renderNavBar()}
                 {/*首页的主要内容*/}
-                 <ScrollView>
-                     {/*头部的View*/}
+                <ScrollView>
+                    {/*头部的View*/}
+                    <TopView />
 
-
-                 </ScrollView>
+                </ScrollView>
             </View>
         );
     },
@@ -64,9 +69,27 @@ var Home = React.createClass({
         )
     },
 
+    // 跳转到购物中心详情页
+    pushToShopCenterDetail(url){
+        this.props.navigator.push(
+            {
+                // component: ShopCenterDetail, // 要跳转的版块
+                // passProps: {'url': this.dealWithUrl(url)}
+            }
+        );
+    },
+
+    // 处理URL
+    dealWithUrl(url){
+        return url.replace('imeituan://www.meituan.com/web/?url=', '');
+    },
+
 
     // 跳转到二级界面
-    pushToDetail(){
+    pushToDetail(data){
+
+        // alert(data);
+
         this.props.navigator.push(
             {
                 // component: HomeDetail, // 要跳转的版块
@@ -119,7 +142,7 @@ const styles = StyleSheet.create({
 
     container: {
         flex: 1,
-        backgroundColor: '#f5f5f5'
+        backgroundColor: '#e8e8e8'
     },
     welcome: {
         fontSize: 20,
@@ -130,3 +153,4 @@ const styles = StyleSheet.create({
 
 // 输出组件类
 module.exports = Home;
+
