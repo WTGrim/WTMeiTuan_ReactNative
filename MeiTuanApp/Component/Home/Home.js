@@ -25,7 +25,7 @@ var MiddleView = require('./HomeMiddleView');
 var MiddleBottomView = require('./HomeMiddleBottomView');
 var ShopCenter = require('./HomeShopCenter');
 var ShopCenterDetail = require('./ShopCenterDetail');
-// var GeustYouLike = require('./XMGGeustYouLike');
+var GeustYouLike = require('./GuessYouLike');
 
 var Home = React.createClass({
     render() {
@@ -51,6 +51,8 @@ var Home = React.createClass({
                     <ShopCenter
                         popToHomeView = {(url) => this.pushToShopCenterDetail(url)}
                     />
+                    {/*猜你喜欢*/}
+                    <GeustYouLike />
 
                 </ScrollView>
             </View>

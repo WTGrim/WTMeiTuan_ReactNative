@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
 
         // 改变主轴的方向
         flexDirection:'row',
-
+        flex:1,
         alignItems:'center',
         justifyContent:'space-around'
     },

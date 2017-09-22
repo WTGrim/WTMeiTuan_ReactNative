@@ -11,7 +11,7 @@ import {
     Text,
     View,
     Image,
-    Platform,  //判断挡圈运行的系统
+    Platform,  //判断当前运行的系统
     Navigator
 } from 'react-native';
 

@@ -71,7 +71,8 @@ const styles = StyleSheet.create({
         // 设置主轴的方向
         flexDirection:'row',
         // 多个cell在同一行显示
-        // flexWrap:'wrap',
+        flexWrap:'wrap',
+        alignItems:'flex-start',
         // 宽度
         width:width
     },
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
     },
 
     titleStyle:{
-        fontSize:Platform.OS == 'ios' ? 14 : 12,
+        fontSize:Platform.OS == 'ios' ? 13 : 11,
         color:'gray'
     }
 });

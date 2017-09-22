@@ -8,8 +8,13 @@ import {
     AppRegistry,
     StyleSheet,
     Text,
-    View
+    View,
+
 } from 'react-native';
+
+
+var Dimensions = require('Dimensions');
+var {width,height} = Dimensions.get('window');
 
 // 导入外部的json数据
 var Home_D4 = require('../../LocalData/Home_D4.json');
@@ -30,7 +35,7 @@ var BottomView = React.createClass({
             <View style={styles.container}>
                 {/*上部分*/}
                 <View style={styles.topViewStyle}>
-                    
+
                 </View>
                 {/*下部分*/}
                 <View style={styles.bottomViewStyle}>
@@ -87,7 +92,7 @@ var BottomView = React.createClass({
 
 const styles = StyleSheet.create({
     container: {
-        marginTop:15
+        marginTop:15,
     },
 
     topViewStyle:{
@@ -97,7 +102,8 @@ const styles = StyleSheet.create({
     bottomViewStyle:{
         // 设置主轴的方向
         flexDirection:'row',
-        flexWrap:'wrap'
+        flexWrap:'wrap',
+        // alignItems:'flex-start',
     }
 });
 
